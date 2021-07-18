@@ -21,10 +21,10 @@ hr{
    
     color: rgb(219, 218, 218) ;
 }
-.material-icons.recemendet{cursor: pointer; font-size: 36px; color: rgb(219, 218, 218);}
+.material-icons.recemendet{ cursor: pointer;font-size: 36px; color: rgb(219, 218, 218);}
 .material-icons.rm{cursor: pointer;color: #BFCAFF;}
 .material-icons.add{cursor: pointer;color:#BFCAFF}
-.material-icons.rm.md-48 {  cursor: pointer;font-size: 36px;color:rgb(219, 218, 218);}
+.material-icons.rm.md-48 {  font-size: 36px;color:rgb(219, 218, 218);}
 .title-container{
     text-align: center;
     color: white;
@@ -125,4 +125,11 @@ width: 100%;
     flex-basis: 0 ;
     flex-grow: 1;
     text-align: center;
+}
+.like,.delete{
+ border: none;
+ background-color:transparent;
+}
+.total{
+    text-align:end
 }

@@ -1,23 +1,49 @@
-var removeBotton = document.getElementsByClassName('material-icons rm md-48')
+
+var removeBotton = document.getElementsByClassName('delete')
 console.log(removeBotton);
-for (var i=0 ;i<removeBotton.length ; i++)
-    {
-       
-        
-        removeBotton[i].addEventListener('click',function(e){
+for (var i=0 ;i<removeBotton.length ; i++){
+      var bottonRemove= removeBotton[i];
+      bottonRemove.addEventListener('click',function(e){
                 console.log('clicked');
                var buttonClicked=e.target;
               
-               buttonClicked.parentElement.parentElement.remove();
+               buttonClicked.parentElement.parentElement.parentElement.remove();
             }) 
 }
-var likeButton = document.getElementsByClassName('material-icons recemendet');
-console.log(likeButton);
-for(var i=0;i<likeButton.length;i++){
-        var buttonlike=likeButton[i];
-        button.addEventListener('click',function(e){
-            var buttonLiked=e.target
-            buttonLiked.style.color='red';
+var likeBotton = document.getElementsByClassName('like');
+for(var i=0;i<likeBotton.length;i++){
+    var bottonLike =likeBotton[i]
+    bottonLike.addEventListener('click',function(e){
+            var botton=e.target;
+             if(botton.style.color=='red'){
+                 botton.style.color='rgb(219, 218, 218)';
+             }else{
+                botton.style.color='red';}
 
         })
+}
+var addBotton=document.getElementsByClassName('material-icons add')
+for(var i=0;i<addBotton.length;i++){
+    console.log(addBotton[i]);
+    var bottonAdd=addBotton[i];
+    bottonAdd.addEventListener('click',function(e){
+    var botton=e.target;
+    
+   var inputField=botton.parentElement.firstElementChild.nextElementSibling;
+       inputField.value=parseInt(parseInt(inputField.value)+1);   
+})
+}
+var decBotton=document.getElementsByClassName('material-icons rm')
+for(var i=0;i<decBotton.length;i++){
+    console.log(decBotton[i]);
+    var bottonDec=decBotton[i];
+    bottonDec.addEventListener('click',function(e){
+    var botton=e.target;
+    
+   var inputField=botton.parentElement.firstElementChild.nextElementSibling;
+       inputField.value=parseInt(parseInt(inputField.value)-1);   
+})
+}
+function updateCarttotal(){
+  
 }
